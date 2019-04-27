@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/executeTests.dir/sqrt_test.cpp.o"
+  "CMakeFiles/executeTests.dir/ArrayList_test.cpp.o"
   "executeTests.pdb"
   "executeTests"
 )

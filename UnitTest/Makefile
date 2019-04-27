@@ -111,17 +111,57 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named executeTests
+# Target rules for targets named testArrayList
 
 # Build rule for target.
-executeTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 executeTests
-.PHONY : executeTests
+testArrayList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testArrayList
+.PHONY : testArrayList
 
 # fast build rule for target.
-executeTests/fast:
-	$(MAKE) -f CMakeFiles/executeTests.dir/build.make CMakeFiles/executeTests.dir/build
-.PHONY : executeTests/fast
+testArrayList/fast:
+	$(MAKE) -f CMakeFiles/testArrayList.dir/build.make CMakeFiles/testArrayList.dir/build
+.PHONY : testArrayList/fast
+
+#=============================================================================
+# Target rules for targets named testSqrt
+
+# Build rule for target.
+testSqrt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testSqrt
+.PHONY : testSqrt
+
+# fast build rule for target.
+testSqrt/fast:
+	$(MAKE) -f CMakeFiles/testSqrt.dir/build.make CMakeFiles/testSqrt.dir/build
+.PHONY : testSqrt/fast
+
+ArrayList_test.o: ArrayList_test.cpp.o
+
+.PHONY : ArrayList_test.o
+
+# target to build an object file
+ArrayList_test.cpp.o:
+	$(MAKE) -f CMakeFiles/testArrayList.dir/build.make CMakeFiles/testArrayList.dir/ArrayList_test.cpp.o
+.PHONY : ArrayList_test.cpp.o
+
+ArrayList_test.i: ArrayList_test.cpp.i
+
+.PHONY : ArrayList_test.i
+
+# target to preprocess a source file
+ArrayList_test.cpp.i:
+	$(MAKE) -f CMakeFiles/testArrayList.dir/build.make CMakeFiles/testArrayList.dir/ArrayList_test.cpp.i
+.PHONY : ArrayList_test.cpp.i
+
+ArrayList_test.s: ArrayList_test.cpp.s
+
+.PHONY : ArrayList_test.s
+
+# target to generate assembly for a file
+ArrayList_test.cpp.s:
+	$(MAKE) -f CMakeFiles/testArrayList.dir/build.make CMakeFiles/testArrayList.dir/ArrayList_test.cpp.s
+.PHONY : ArrayList_test.cpp.s
 
 sqrt_test.o: sqrt_test.cpp.o
 
@@ -129,7 +169,7 @@ sqrt_test.o: sqrt_test.cpp.o
 
 # target to build an object file
 sqrt_test.cpp.o:
-	$(MAKE) -f CMakeFiles/executeTests.dir/build.make CMakeFiles/executeTests.dir/sqrt_test.cpp.o
+	$(MAKE) -f CMakeFiles/testSqrt.dir/build.make CMakeFiles/testSqrt.dir/sqrt_test.cpp.o
 .PHONY : sqrt_test.cpp.o
 
 sqrt_test.i: sqrt_test.cpp.i
@@ -138,7 +178,7 @@ sqrt_test.i: sqrt_test.cpp.i
 
 # target to preprocess a source file
 sqrt_test.cpp.i:
-	$(MAKE) -f CMakeFiles/executeTests.dir/build.make CMakeFiles/executeTests.dir/sqrt_test.cpp.i
+	$(MAKE) -f CMakeFiles/testSqrt.dir/build.make CMakeFiles/testSqrt.dir/sqrt_test.cpp.i
 .PHONY : sqrt_test.cpp.i
 
 sqrt_test.s: sqrt_test.cpp.s
@@ -147,7 +187,7 @@ sqrt_test.s: sqrt_test.cpp.s
 
 # target to generate assembly for a file
 sqrt_test.cpp.s:
-	$(MAKE) -f CMakeFiles/executeTests.dir/build.make CMakeFiles/executeTests.dir/sqrt_test.cpp.s
+	$(MAKE) -f CMakeFiles/testSqrt.dir/build.make CMakeFiles/testSqrt.dir/sqrt_test.cpp.s
 .PHONY : sqrt_test.cpp.s
 
 # Help Target
@@ -157,8 +197,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... testArrayList"
 	@echo "... edit_cache"
-	@echo "... executeTests"
+	@echo "... testSqrt"
+	@echo "... ArrayList_test.o"
+	@echo "... ArrayList_test.i"
+	@echo "... ArrayList_test.s"
 	@echo "... sqrt_test.o"
 	@echo "... sqrt_test.i"
 	@echo "... sqrt_test.s"
